@@ -8,7 +8,7 @@ from django.contrib import messages
 import datetime
 
 
-from .models import User, Auction, Comment, Watchlist
+from .models import User, Auction, Comment, Watchlist, Category
 from .forms import AuctionForm, CommentForm, BidForm
 
 

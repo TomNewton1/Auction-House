@@ -27,7 +27,7 @@
             <div class="col-md-4 col-sm-6 my-col mb-5 text-center">
                 <div class="card text-center h-100">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <img alt="Card image cap" class="card-img-top embed-responsive-item" src="{{auction.image_url}}" alt="">
+                        <img alt="Card image cap" class="card-img-top embed-responsive-item" src="{{auction.image_url}}" onerror="this.onerror=null;this.src='{% static "auctions/images/placeholderimage.png" %}';" alt="">
                      </div>
                     <div class="card-body">
                       <h4 class="card-title">{{auction.title}}</h4>
