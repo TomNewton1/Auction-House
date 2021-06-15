@@ -11,7 +11,7 @@ class Auction(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField(max_length=220, null=True)
     image_url = models.URLField(max_length=600, default=None)
-    category = models.CharField(max_length=120, default=True)
+    category = models.CharField(max_length=120, default=None)
     price = models.DecimalField(decimal_places=2, max_digits=10000, default=None)
     date = models.DateTimeField(auto_now_add=True) 
     end_date = models.DateField()
