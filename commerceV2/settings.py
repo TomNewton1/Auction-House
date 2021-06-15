@@ -78,25 +78,17 @@ WSGI_APPLICATION = 'commerceV2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2p9uup0r8i9pg',
-        'HOST': 'ec2-54-74-77-126.eu-west-1.compute.amazonaws.com', 
-        'PORT': 5432, 
-        'USER': 'wrelvqeflmmlsw',
-        'PASSWORD': '3db753ebe85190fe301d8854567c06cc180feba1d528eede8403fc4ceb5b737e'
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
-"""
 
 # Link to Heroku PostgresDB
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
-
-"""
 
 
 AUTH_USER_MODEL = 'auctions.User'
