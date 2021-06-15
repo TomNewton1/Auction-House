@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '43r_b8luq7wym0b(&$m&)v(f*1oh$c_px1ndms#1t$9ch!#=72'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['auction-house-commerce.herokuapp.com', '127.0.0.1']
 
