@@ -8,7 +8,7 @@ from .models import Auction, Category, Comment, Bid
 # Create list of categories
 
 categories = Category.objects.all().values_list('name','name')
-print("Categories:", categories)
+#print("Categories:", categories)
 
 category_list = []
 
