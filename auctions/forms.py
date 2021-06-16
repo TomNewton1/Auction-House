@@ -7,6 +7,7 @@ from .models import Auction, Category, Comment, Bid
 
 # Create list of categories
 
+
 categories = Category.objects.all().values_list('name','name')
 print("Categories:", categories)
 
@@ -16,6 +17,7 @@ if categories:
     print("There are categories atm")
     for category in categories:
         category_list.append(category)
+
 
 class DateInput(forms.DateInput):
     input_type = 'date'
