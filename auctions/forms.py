@@ -7,14 +7,15 @@ from .models import Auction, Category, Comment, Bid
 
 # Create list of categories
 
-#categories = Category.objects.all().values_list('name','name')
-#print("Categories:", categories)
+categories = Category.objects.all().values_list('name','name')
+print("Categories:", categories)
 
-category_list = [('Fashion', 'Fashion'),('Toys','Toys'),('Cars','Cars'),('Cooking','Cooking'),('Sport','Sport')]
+category_list = []
 
-#for category in categories:
-    #category_list.append(category)
-
+if categories:
+    print("There are categories atm")
+    for category in categories:
+        category_list.append(category)
 
 class DateInput(forms.DateInput):
     input_type = 'date'

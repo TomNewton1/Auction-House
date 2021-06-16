@@ -17,7 +17,7 @@ class Auction(models.Model):
     end_date = models.DateField()
     status = models.CharField(max_length=6, default="Open")
     highest_bid = models.DecimalField(decimal_places=2, max_digits=100, null=True, default=0)
-    highest_bidder = models.CharField(max_length=200, null=True)
+    highest_bidder = models.CharField(max_length=200, default=None, blank=True)
 
     def __str__(self):
         return self.title
