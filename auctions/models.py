@@ -12,11 +12,11 @@ class Auction(models.Model):
     description = models.TextField(max_length=220, null=True)
     image_url = models.URLField(max_length=600, default=None)
     category = models.CharField(max_length=120, default='uncategorised')
-    price = models.DecimalField(decimal_places=2, max_digits=1000, default=None)
+    price = models.DecimalField(decimal_places=2, max_digits=100, default=None)
     date = models.DateTimeField(auto_now_add=True) 
     end_date = models.DateField()
     status = models.CharField(max_length=6, default="Open")
-    highest_bid = models.DecimalField(decimal_places=2, max_digits=1000, null=True, default=0)
+    highest_bid = models.DecimalField(decimal_places=2, max_digits=100, null=True, default=0)
     highest_bidder = models.CharField(max_length=200, null=True)
 
     def __str__(self):
@@ -35,7 +35,7 @@ class Watchlist(models.Model):
 class Bid(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     auction = models.ForeignKey(Auction, on_delete=models.CASCADE, default=None)
-    price = models.DecimalField(decimal_places=2, max_digits=1000, default=None)
+    price = models.DecimalField(decimal_places=2, max_digits=100, default=None)
 
 
 class Comment(models.Model):
